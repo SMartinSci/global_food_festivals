@@ -1,5 +1,4 @@
 #Environment
-require 'pry'
 require 'open-uri'
 require 'nokogiri'
 
