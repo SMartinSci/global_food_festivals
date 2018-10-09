@@ -30,4 +30,8 @@ class GlobalFoodFestivals::CLI
     end
   end
   end
+  
+    def goodbye
+    puts "Global food festivals await you!"
+  end
 end
