@@ -8,7 +8,7 @@ class GlobalFoodFestivals::CLI
   end
 
   def list_festivals
-    puts <<- DOC
+    puts <<- DOC.gsub /^\s*/, ''
     1.Tasting Australia – South Australia
     2.Venice Food & Wine Festival – 	Venice, Italy
     3.Vegas Uncork’d – Las Vegas, 	Nevada
