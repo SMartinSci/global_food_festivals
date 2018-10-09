@@ -11,7 +11,7 @@ Gem::Specification.new do |spec|
 
   spec.summary       = %q{Food festivals around the world.}
   spec.description   = %q{explore food, world.}
-  spec.homepage      = "https://github.com/SMartinSci/global_food_festivals."
+  spec.homepage      = "https://github.com/SMartinSci/global_food_festivals"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

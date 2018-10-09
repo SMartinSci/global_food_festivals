@@ -5,13 +5,13 @@ class GlobalFoodFestivals::CLI
   def call
     list_festivals
     menu
-    goodbye123
+    goodbye
   end
 
   def list_festivals
     puts "Global Food Festivals:"
     # get festivals
-    @festivals = GlobalFoodFestivals::Festivals.complete
+    @festivals = GlobalFoodFestivals::Festival.complete
   end
 
    def menu
