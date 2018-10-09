@@ -16,6 +16,7 @@ class GlobalFoodFestivals::CLI
     4.… etc.
     # get festivals
     DOC
+    @festivals = GlobalFoodFestivals::Festivals.all
   end
   
    def menu
