@@ -1,5 +1,5 @@
 class GlobalFoodFestivals::Festival
-
+  attr_accessor :name, :url, :location, :description
   def self.complete
     # Return a bunch of instances of festivals
     puts <<- DOC.gsub /^\s*/, ''
