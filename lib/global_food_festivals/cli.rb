@@ -30,6 +30,8 @@ class GlobalFoodFestivals::CLI
       puts "More info on festival 2"
     when "list"
       list_festivals
+     else
+      puts "Type list or exit"
       end
     end
   end
