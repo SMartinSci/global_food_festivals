@@ -1,7 +1,7 @@
 #CLI Controller
 
 class GlobalFoodFestivals::CLI
-  
+
   def call
     list_festivals
     menu
@@ -18,13 +18,13 @@ class GlobalFoodFestivals::CLI
     DOC
     @festivals = GlobalFoodFestivals::Festivals.all
   end
-  
+
    def menu
     puts "Enter the number of the Festival that you would like more information on or type exit to enter:"
     input = nil
     while input != "exit"
       input = gets.strip.downcase
-    case input 
+    case input
     when "1"
       puts "More info on festival 1..."
     when "2"
@@ -36,7 +36,7 @@ class GlobalFoodFestivals::CLI
       end
     end
   end
-  
+
     def goodbye
     puts "Global food festivals await you!"
   end
