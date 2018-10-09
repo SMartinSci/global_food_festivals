@@ -16,4 +16,8 @@ class GlobalFoodFestivals::CLI
     # get festivals
     DOC
   end
+  
+    def menu
+    puts "Enter the number of the Festival that you would like more information on:"
+  end
 end
