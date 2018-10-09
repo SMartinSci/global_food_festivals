@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 require "bundler/setup"
-require './lib/global_food_festivals'
+require "./lib/global_food_festivals"
 
 GlobalFoodFestivals::CLI.new.call
 
