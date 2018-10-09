@@ -28,8 +28,10 @@ class GlobalFoodFestivals::CLI
       puts "More info on festival 1..."
     when "2"
       puts "More info on festival 2"
+    when "list"
+      list_festivals
+      end
     end
-  end
   end
   
     def goodbye
