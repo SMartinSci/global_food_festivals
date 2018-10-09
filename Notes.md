@@ -12,7 +12,10 @@ Show a list of global food festivals
 Which festival do you want to learn more about?
 
 A festival has a name
+
 A festival has a url
+
 a festival has a location
+
 A festival has a description
 
