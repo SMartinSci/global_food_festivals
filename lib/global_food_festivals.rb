@@ -1,10 +1,7 @@
-require "global_food_festivals/version"
+require_relative "./global_food_festivals/version"
 
 module GlobalFoodFestivals
 
-def food
-
 end
 
-
-end
+require_relative './global_food_festivals/cli'
