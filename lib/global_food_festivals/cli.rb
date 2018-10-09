@@ -20,8 +20,9 @@ class GlobalFoodFestivals::CLI
   
    def menu
     puts "Enter the number of the Festival that you would like more information on or type exit to enter:"
+    input = nil
     while input != "exit"
-    input = gets.strip.downcase
+      input = gets.strip.downcase
     case input 
     when "1"
       puts "More info on festival 1..."
