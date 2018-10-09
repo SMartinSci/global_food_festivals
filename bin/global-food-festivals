@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-puts "Hello World"
+GlobalFoodFestivals::CLI.new.call
+
+#class CLI to instantiate and use the call method on
