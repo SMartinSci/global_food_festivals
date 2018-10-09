@@ -2,13 +2,13 @@ class GlobalFoodFestivals::Festival
   attr_accessor :name, :url, :location, :description
   def self.complete
     # Return a bunch of instances of festivals
-    puts <<- DOC.gsub /^\s*/, ''
-    1.Tasting Australia – South Australia
-    2.Venice Food & Wine Festival – 	Venice, Italy
-    3.Vegas Uncork’d – Las Vegas, 	Nevada
-    4.… etc.
-      #get festivals
-    DOC
+#     puts <<- DOC.gsub /^\s*/, ''
+#     1.Tasting Australia – South Australia
+#     2.Venice Food & Wine Festival – 	Venice, Italy
+#     3.Vegas Uncork’d – Las Vegas, 	Nevada
+#     4.… etc.
+#       #get festivals
+#     DOC
     festival_1 = Festival.new
     festival_1.name = "Tasting Australia"
     festival_1.url = "https://www.fodors.com/world/australia-and-the-pacific/australia/south-australia"
