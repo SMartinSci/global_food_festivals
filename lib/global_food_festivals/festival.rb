@@ -16,5 +16,6 @@ festivals << self.scrape_fodors
 
   def self.scrape_fodors
     doc = Nokogiri::HTML(open("https://www.fodors.com"))
+    festival = self.new
   end
 end
