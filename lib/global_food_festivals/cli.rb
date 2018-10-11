@@ -12,6 +12,9 @@ class GlobalFoodFestivals::CLI
     puts "Global Food Festivals:"
     # get festivals
     @festivals = GlobalFoodFestivals::Festival.complete
+    @festivals.each.with_index(1) do |festival, i| #using 1 eliminates the need to subtract 1 from the index
+      puts "#{i}. #{festival.name} - #{festival.location}"
+    end
   end
 
    def menu
@@ -19,14 +22,13 @@ class GlobalFoodFestivals::CLI
     input = nil
     while input != "exit"
       input = gets.strip.downcase
-    case input
-    when "1"
-      puts "More info on festival 1..."
-    when "2"
-      puts "More info on festival 2"
-    when "list"
-      list_festivals
-     else
+
+      if input.to_i > 0 #If greater than 0 treat as integer, not a string
+        the_festival = @festivals[input.to_i-1]
+        puts "#{the_festival.name} - #{the_festival.location}"
+      elsif input == "list"
+        list_festivals
+      else
       puts "Type list or exit"
       end
     end
