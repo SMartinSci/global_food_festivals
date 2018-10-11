@@ -1,8 +1,7 @@
 #CLI Controller
+class GlobalFoodFestivals::CLI
 
-class GFF::CLI
-
-
+  #
   def call
     list_festivals
     menu
@@ -12,7 +11,7 @@ class GFF::CLI
   def list_festivals
     puts "Global Food Festivals:"
     # get festivals
-    @festivals = GFF::Festival.complete
+    @festivals = GlobalFoodFestivals::Festival.complete
     @festivals.each.with_index(1) do |festival, i| #using 1 eliminates the need to subtract 1 from the index
       puts "#{i}. #{festival.name} - #{festival.location}"
     end

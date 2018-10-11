@@ -2,6 +2,6 @@
 require "bundler/setup"
 require_relative "../lib/global_food_festivals"
 
-GFF::CLI.new.call
+GlobalFoodFestivals::CLI.new.call
 
 #class CLI to instantiate and use the call method on
