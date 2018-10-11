@@ -1,7 +1,8 @@
 class GlobalFoodFestivals::Festival
   attr_accessor :name, :url, :location, :description
+
   def self.complete
-    self.scrape_complete
+    self.scrape_festivals
   end
 
   def self.scrape_festivals
@@ -15,7 +16,6 @@ festivals << self.scrape_fodors
 
   def self.scrape_fodors
     doc = Nokogiri::HTML(open("https://www.fodors.com"))
-    binding.pry
     festival = self.new
   end
 end
