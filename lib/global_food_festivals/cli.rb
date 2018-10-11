@@ -1,7 +1,7 @@
 #CLI Controller
+# class
 class GlobalFoodFestivals::CLI
 
-  #
   def call
     list_festivals
     menu
