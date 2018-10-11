@@ -1,4 +1,7 @@
-class GlobalFoodFestivals::Festival
+require 'open-uri'
+require 'nokogiri'
+
+class GFF::Festival
   attr_accessor :name, :url, :location, :description
 
   def self.complete
@@ -9,13 +12,15 @@ class GlobalFoodFestivals::Festival
     #Go to fodors, find the festival, extract the properties, instantiate a festival
     festivals = []
 
-festivals << self.scrape_fodors
+    festivals << self.scrape_fodors
     festival_1 = self.new
     festivals
   end
 
   def self.scrape_fodors
     doc = Nokogiri::HTML(open("https://www.fodors.com"))
-    festival = self.new
+    #festival = self.new
+    #title = doc.search("h2").text
+
   end
 end

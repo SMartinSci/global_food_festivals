@@ -5,7 +5,7 @@ require "global_food_festivals/version"
 
 Gem::Specification.new do |spec|
   spec.name          = "global_food_festivals"
-  spec.version       = GlobalFoodFestivals::VERSION
+  spec.version       = GFF::VERSION
   spec.authors       = ["'Sherry Martin'"]
   spec.email         = ["'sm674@cornell.edu'"]
 
