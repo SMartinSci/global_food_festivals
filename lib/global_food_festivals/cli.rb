@@ -10,11 +10,9 @@ class CLI
 
   def list_festivals
     puts "Global Food Festivals:"
-    # get festivals
-   Festival.scrape_fodors
-   Festival.all.each.with_index(1) do |festival, i| #using 1 eliminates the need to subtract 1 from the index
-
-      puts "#{i}. #{festival.name} - #{festival.location} - #{festival.description}"
+    @all_festivals = Festival.scrape_fodors
+    Festival.all.each.with_index(1) do |festival, i| #using 1 eliminates the need to subtract 1 from the index
+    puts "#{i}. #{festival.name}\n\n"
     end
   end
 
@@ -25,8 +23,10 @@ class CLI
       input = gets.strip.downcase
 
       if input.to_i > 0 #If greater than 0 treat as integer, not a string
-        the_festival = @festivals[input.to_i-1]
-        puts "#{the_festival.name} - #{the_festival.location}"
+        the_festival = @all_festivals[input.to_i-1]
+        puts "#{the_festival.name}\n\n"
+        puts "#{the_festival.location}\n\n"
+        puts "#{the_festival.description}"
       elsif input == "list"
         list_festivals
       else

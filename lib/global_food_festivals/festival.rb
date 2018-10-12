@@ -1,5 +1,5 @@
 class Festival
-  #attr_accessor :name, :location, :description
+  attr_reader :name, :location, :description
   @@all = []
 
   #def self.scrape_festivals
@@ -24,7 +24,7 @@ class Festival
     #food_festival = self.new
     name = festival.css("h2").text.gsub("Book a Hotel", " ").delete!("\n").strip
     location = festival.css("h3 span").text.delete!("\n").strip
-    description = festival.css("p").map(&:text).reject{ |c| c.empty? }
+    description = festival.css("p").map(&:text).reject{ |c| c.empty? }.join("','")
     Festival.new(name, location, description)
     end
   end
