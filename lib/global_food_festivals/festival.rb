@@ -22,8 +22,7 @@ class GlobalFoodFestivals::Festival
 
     links = doc.search(".container.slides").map do |festival|
     food_festival = self.new
-    food_festival.name = festival.css  doc.search("h2").text.gsub("Book a Hotel", " ").strip
-
+    food_festival.name = festival.css("h2").text.gsub("Book a Hotel", " ").delete!("\n").strip
     end
 
 end
