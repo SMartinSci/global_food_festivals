@@ -20,15 +20,15 @@ class GlobalFoodFestivals::Festival
     doc = Nokogiri::HTML(open("https://www.fodors.com/news/photos/12-global-food-festivals-worth-the-trip"))
     binding.pry
 
-    festival = self.new
     links = doc.search(".container.slides").map do |festival|
+    food_festival = self.new
+    food_festival.name = festival.css  doc.search("h2").text.gsub("Book a Hotel", " ").strip
 
-    name = festival.css("h2").text.strip
-  end
+    end
+
 end
-  #   url = doc.search("href")
-  #   location = doc.search
-  #   description = doc.search
-  #   festival
-#   # end
-# end
+end
+#   url = doc.search("href")
+#   location = doc.search
+#   description = doc.search
+#   festival
