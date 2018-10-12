@@ -1,5 +1,4 @@
 #CLI Controller
-# class
 class CLI
 
   def call
