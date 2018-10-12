@@ -1,7 +1,7 @@
 
 
 class GlobalFoodFestivals::Festival
-  attr_accessor :name, :url, :location, :description
+  attr_accessor :name, :location, :description
 
   def self.complete
     self.scrape_festivals
@@ -23,11 +23,12 @@ class GlobalFoodFestivals::Festival
     links = doc.search(".container.slides").map do |festival|
     food_festival = self.new
     food_festival.name = festival.css("h2").text.gsub("Book a Hotel", " ").delete!("\n").strip
-    end
+    food_festival.location = festival.css("h3 span").text.delete!("\n").strip
+  end
 
 end
 end
-#   url = doc.search("href")
+#
 #   location = doc.search
 #   description = doc.search
 #   festival
