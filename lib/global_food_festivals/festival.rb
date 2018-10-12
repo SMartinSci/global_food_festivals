@@ -1,6 +1,4 @@
-
-
-class GlobalFoodFestivals::Festival
+class Festival
   attr_accessor :name, :location, :description
 
   def self.complete
@@ -18,17 +16,11 @@ class GlobalFoodFestivals::Festival
 
   def self.scrape_fodors
     doc = Nokogiri::HTML(open("https://www.fodors.com/news/photos/12-global-food-festivals-worth-the-trip"))
-    binding.pry
-
     links = doc.search(".container.slides").map do |festival|
     food_festival = self.new
     food_festival.name = festival.css("h2").text.gsub("Book a Hotel", " ").delete!("\n").strip
     food_festival.location = festival.css("h3 span").text.delete!("\n").strip
+    food_festival.description = festival.css("p").map(&:text)
+    end
   end
-
 end
-end
-#
-#   location = doc.search
-#   description = doc.search
-#   festival
