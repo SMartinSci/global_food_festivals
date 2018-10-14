@@ -1,8 +1,6 @@
 # GlobalFoodFestivals
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/global_food_festivals`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+This Ruby GEM provides the user a CLI to view "12 Global Food Festivals Worth the Trip" as  described on Fodor's Travel website. This program will list all 12 festivals and the user can choose which festival, by number, they would like more information on. Details include a short description of the festival and the festival location.
 
 ## Installation
 
@@ -22,7 +20,7 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+Run bin/global-food-festivals to execute the gem.
 
 ## Development
 
