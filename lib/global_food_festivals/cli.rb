@@ -16,7 +16,7 @@ class CLI
   end
 
    def menu
-    puts "Enter the number of the Festival that you would like more information on or type exit to enter:"
+    puts "Enter the number of the festival that you would like more information on or type 'exit' to exit the program"
     input = nil
     while input != "exit"
       input = gets.strip.downcase
@@ -29,7 +29,7 @@ class CLI
       elsif input == "list"
         list_festivals
       else
-        puts "That value does not coorespond to a global food festival, please type 'list' or 'exit'"
+        puts "That value does not coorespond to a global food festival, please type 'list' to view the list of 12 global festivals again or 'exit'"
       end
     end
   end
