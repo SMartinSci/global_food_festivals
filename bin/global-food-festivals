@@ -2,6 +2,5 @@
 #class CLI to instantiate and use the call method on
 require "bundler/setup"
 require_relative "../lib/global_food_festivals"
-require "require_all"
 
 CLI.new.call
