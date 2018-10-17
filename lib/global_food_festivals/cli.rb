@@ -2,6 +2,7 @@
 class CLI
 
   def call
+    Scraper.scrape_fodors
     list_festivals
     menu
     goodbye
@@ -11,8 +12,8 @@ class CLI
     puts "Welcome to 12 Global Food Festivals worth the trip.\n\n"
     puts "Which food festivals would you like to see more information?\n\n"
     puts "Enter the cooresponding number, listed below, of each food festival to get a brief description and location.\n\n"
-    @all_festivals = Festival.scrape_fodors
-    @all_festivals.each.with_index(1) do |festival, i| #using 1 eliminates the need to subtract 1 from the index
+
+    Festival.all.each.with_index(1) do |festival, i| #using 1 eliminates the need to subtract 1 from the index
     puts "#{i}. #{festival.name}\n\n"
     end
   end
