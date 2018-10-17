@@ -24,6 +24,7 @@ class CLI
       input = gets.strip.downcase
 
       if input.to_i.between?(1, 12) #If greater than 0 treat as integer, not a string
+        @all_festivals = Scraper.scrape_fodors  # I added this line back in so the program would run.
         the_festival = @all_festivals[input.to_i-1]
         puts "#{the_festival.name}\n\n"
         puts "#{the_festival.location}\n\n"
