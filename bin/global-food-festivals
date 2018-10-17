@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #class CLI to instantiate and use the call method on
-require "bundler/setup"
+#require "bundler/setup"
 require_relative "../lib/global_food_festivals"
 
 CLI.new.call
