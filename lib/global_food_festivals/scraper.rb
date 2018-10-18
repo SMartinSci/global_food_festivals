@@ -1,3 +1,5 @@
+#Go to fodors, find the festival, extract the properties, instantiate a festival
+
 class Scraper
   def self.scrape_fodors
     doc = Nokogiri::HTML(open("https://www.fodors.com/news/photos/12-global-food-festivals-worth-the-trip"))

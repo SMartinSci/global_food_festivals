@@ -1,16 +1,17 @@
+require 'pry'
+
 class Festival
   attr_reader :name, :location, :description
   @@all = []
-    #Go to fodors, find the festival, extract the properties, instantiate a festival
 
   def self.all
     @@all
   end
 
-  def initialize(name, location, description)
+  def initialize(name, location, description) #Each instance variable below, returns an instance of each attribute. e.g. @name = "Venice Food and Wine Festival"
     @name = name
     @location = location
     @description = description
-    @@all << self
+    @@all << self  #self returns 1 instance of Festival/1 Festival ID, location, name, description; @@all returns all instances ID's and attributes
   end
 end
