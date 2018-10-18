@@ -5,8 +5,7 @@ class Festival
   @@all = []
 
   def self.all
-    @@all
-    binding.pry
+    @@all #returns all Festival instances' ID's and attributes
   end
 
   def initialize(name, location, description) #Each instance variable below, returns an instance of each attribute. e.g. @name = "Venice Food and Wine Festival"

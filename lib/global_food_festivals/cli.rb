@@ -10,26 +10,26 @@ class CLI
 
   def list_festivals
     puts "Welcome to 12 Global Food Festivals worth the trip.\n\n"
-    puts "Which food festivals would you like to see more information?\n\n"
-    puts "Enter the cooresponding number, listed below, of each food festival to get a brief description and location.\n\n"
-
     Festival.all.each.with_index(1) do |festival, i| #using 1 eliminates the need to subtract 1 from the index
     puts "#{i}. #{festival.name}\n\n"
     end
-  end
+
+    puts "Which food festivals would you like to see more information on?\n\n"
+    puts "Enter the cooresponding number, listed above, of each food festival to get a brief description and location.\n\n"
+end
 
    def menu
     input = nil
-    while input != "exit"
+    while input != "exit".downcase
       input = gets.strip.downcase
 
       if input.to_i.between?(1, 12) #If greater than 0 treat as integer, not a string
-        @all_festivals = Scraper.scrape_fodors  # I added this line back in so the program would run.
-        the_festival = @all_festivals[input.to_i-1]
+        #@all_festivals = Scraper.scrape_fodors  # I added this line back in so the program would run.
+        the_festival = Scraper.scrape_fodors[input.to_i-1]
         puts "#{the_festival.name}\n\n"
         puts "#{the_festival.location}\n\n"
         puts "#{the_festival.description}\n\n"
-        puts "Enter the number of the festival that you would like more information on or type 'exit' to exit the program"
+        puts "Enter the number of the festival that you would like more information, type list to view all 12 festivals, or type 'exit' to exit the program"
       elsif input == "list"
         list_festivals
       else
