@@ -3,6 +3,7 @@ require 'pry'
 class CLI
 
   def call
+    puts "Welcome to 12 Global Food Festivals worth the trip.\n\n"
     Scraper.scrape_fodors
     list_festivals
     menu
@@ -10,8 +11,7 @@ class CLI
   end
 
   def list_festivals
-    puts "Welcome to 12 Global Food Festivals worth the trip.\n\n"
-    Festival.all[1..12].each.with_index(1) do |festival, i| #using 1 eliminates the need to subtract 1 from the index
+    Festival.all[0..11].each.with_index(1) do |festival, i| #using 1 eliminates the need to subtract 1 from the index
     puts "#{i}. #{festival.name}\n\n"
     end
 
@@ -31,6 +31,7 @@ end
         puts "#{the_festival.location}\n\n"
         puts "#{the_festival.description}\n\n"
         puts "Enter the number of the festival that you would like more information, type list to view all 12 festivals, or type 'exit' to exit the program"
+        list_festivals
       elsif input == "list"
         list_festivals
       else
