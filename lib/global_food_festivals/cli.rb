@@ -1,4 +1,5 @@
 #CLI Controller
+require 'pry'
 class CLI
 
   def call
@@ -10,7 +11,7 @@ class CLI
 
   def list_festivals
     puts "Welcome to 12 Global Food Festivals worth the trip.\n\n"
-    Festival.all.each.with_index(1) do |festival, i| #using 1 eliminates the need to subtract 1 from the index
+    Festival.all[1..12].each.with_index(1) do |festival, i| #using 1 eliminates the need to subtract 1 from the index
     puts "#{i}. #{festival.name}\n\n"
     end
 
@@ -25,7 +26,7 @@ end
 
       if input.to_i.between?(1, 12) #If greater than 0 treat as integer, not a string
         #@all_festivals = Scraper.scrape_fodors  # I added this line back in so the program would run.
-        the_festival = Scraper.scrape_fodors[input.to_i-1]
+        the_festival = Festival.all[input.to_i-1]
         puts "#{the_festival.name}\n\n"
         puts "#{the_festival.location}\n\n"
         puts "#{the_festival.description}\n\n"

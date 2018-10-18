@@ -3,4 +3,4 @@
 #Executable file
 require_relative "../lib/global_food_festivals"
 
-CLI.new.call
+CLI.new.call #Runs program
