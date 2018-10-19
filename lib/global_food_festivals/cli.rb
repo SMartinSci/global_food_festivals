@@ -21,7 +21,7 @@ class CLI
 
     puts ""
     puts "Which food festivals would you like to see more information on?".colorize(:color => :black, :background => :light_white)
-    puts "Enter the cooresponding number, listed above, of each food festival to get a brief description and location.\n".colorize(:color => :black, :background => :light_white)
+    puts "Enter the corresponding number, listed above, of each food festival to get a brief description and location.\n".colorize(:color => :black, :background => :light_white)
 end
 
    def menu
@@ -30,13 +30,14 @@ end
       input = gets.strip.downcase
 
       if input.to_i.between?(1, 12) #If greater than 0 treat as integer, not a string
-        #@all_festivals = Scraper.scrape_fodors  # I added this line back in so the program would run.
         the_festival = Festival.all[input.to_i-1]
-        puts "#{the_festival.name}\n\n"
-        puts "#{the_festival.location}\n\n"
-        puts "#{the_festival.description}\n\n"
-        puts "---------------------------------------------------------------------------------------------------------------------------------------"
-        puts "Enter the number of the festival that you would like more information, type list to view all 12 festivals, or type 'exit' to exit the program"
+        puts <<~INFO
+        #{the_festival.name}\n\n
+        #{the_festival.location}\n\n
+        #{the_festival.description}\n\n
+        ---------------------------------------------------------------------------------------------------------------------------------------
+        Enter the number of the festival that you would like more information, type 'list' to view all 12 festivals, or type 'exit' to exit the program
+        INFO
         list_festivals
       elsif input == "list"
         list_festivals
