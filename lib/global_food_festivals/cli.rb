@@ -1,5 +1,6 @@
 #CLI Controller
 require 'colorize'
+
 class CLI
 
   def call
@@ -31,13 +32,11 @@ end
 
       if input.to_i.between?(1, 12) #If greater than 0 treat as integer, not a string
         the_festival = Festival.all[input.to_i-1]
-        puts <<~INFO
-        #{the_festival.name}\n\n
-        #{the_festival.location}\n\n
-        #{the_festival.description}\n\n
-        ---------------------------------------------------------------------------------------------------------------------------------------
-        Enter the number of the festival that you would like more information, type 'list' to view all 12 festivals, or type 'exit' to exit the program
-        INFO
+        puts "#{the_festival.name}\n\n"
+        puts "#{the_festival.location}\n\n"
+        puts "#{the_festival.description}\n\n"
+        puts "---------------------------------------------------------------------------------------------------------------------------------------"
+        puts "Enter the number of the festival that you would like more information, type 'list' to view all 12 festivals, or type 'exit' to exit the program."
         list_festivals
       elsif input == "list"
         list_festivals
