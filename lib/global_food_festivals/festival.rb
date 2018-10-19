@@ -1,5 +1,3 @@
-require 'pry'
-
 class Festival
   attr_reader :name, :location, :description
   @@all = []
