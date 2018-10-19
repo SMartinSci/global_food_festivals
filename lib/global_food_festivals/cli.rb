@@ -3,7 +3,7 @@ require 'colorize'
 class CLI
 
   def call
-    puts "Welcome to 12 Global Food Festivals worth the trip.\n\n"
+    puts "Welcome to 12 Global Food Festivals worth the trip!\n".red
     Scraper.scrape_fodors
     list_festivals
     menu
@@ -12,11 +12,12 @@ class CLI
 
   def list_festivals
     Festival.all[0..11].each.with_index(1) do |festival, i| #using 1 eliminates the need to subtract 1 from the index
-    puts "#{i}. #{festival.name}\n\n"
+    puts "#{i}. #{festival.name}\n"
     end
 
-    puts "Which food festivals would you like to see more information on?\n\n"
-    puts "Enter the cooresponding number, listed above, of each food festival to get a brief description and location.\n\n"
+    puts ""
+    puts "Which food festivals would you like to see more information on?".red
+    puts "Enter the cooresponding number, listed above, of each food festival to get a brief description and location.\n".red
 end
 
    def menu
