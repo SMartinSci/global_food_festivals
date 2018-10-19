@@ -1,5 +1,5 @@
 #CLI Controller
-require 'pry'
+require 'colorize'
 class CLI
 
   def call
