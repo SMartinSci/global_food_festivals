@@ -3,11 +3,15 @@ require 'colorize'
 class CLI
 
   def call
-    puts "Welcome to 12 Global Food Festivals worth the trip!\n".red
+    greeting
     Scraper.scrape_fodors
     list_festivals
     menu
     goodbye
+  end
+
+  def greeting
+    puts "Welcome to 12 Global Food Festivals worth the trip!\n".colorize(:color => :black, :background => :light_white)
   end
 
   def list_festivals
@@ -16,8 +20,8 @@ class CLI
     end
 
     puts ""
-    puts "Which food festivals would you like to see more information on?".red
-    puts "Enter the cooresponding number, listed above, of each food festival to get a brief description and location.\n".red
+    puts "Which food festivals would you like to see more information on?".colorize(:color => :black, :background => :light_white)
+    puts "Enter the cooresponding number, listed above, of each food festival to get a brief description and location.\n".colorize(:color => :black, :background => :light_white)
 end
 
    def menu
@@ -37,7 +41,7 @@ end
       elsif input == "list"
         list_festivals
       else
-        puts "That value does not coorespond to a global food festival, please type 'list' to view the list of 12 global festivals again or 'exit'"
+        puts "That value does not correspond to a global food festival, please type 'list' to view the list of 12 global festivals again or 'exit'"
       end
     end
   end
