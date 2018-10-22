@@ -40,6 +40,7 @@ end
         list_festivals
       elsif input == "list"
         list_festivals
+      elsif input == "exit".downcase
       else
         puts "That value does not correspond to a global food festival, please type 'list' to view the list of 12 global festivals again or 'exit'"
       end
