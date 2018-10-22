@@ -16,7 +16,7 @@ class CLI
   end
 
   def list_festivals
-    Festival.all[0..11].each.with_index(1) do |festival, i| #using 1 eliminates the need to subtract 1 from the index
+    Festival.all.each.with_index(1) do |festival, i| #using 1 eliminates the need to subtract 1 from the index
     puts "#{i}. #{festival.name}\n"
     end
 

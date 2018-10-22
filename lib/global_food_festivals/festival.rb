@@ -2,7 +2,7 @@ class Festival
   attr_reader :name, :location, :description  #attr_reader instance method
   @@all = []
 
-  def self.all #returns all Festival instances' ID's and attributes
+  def self.all #Class method, returns all Festival instances' ID's and attributes
     @@all #returns all Festival instances' ID's and attributes
   end
 
