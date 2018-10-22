@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
+#Shebang operator, uses the env command to figure out where the Ruby interpreter is and run it.
+#Tells our program what program to run our file with by asking for the current configured version of Ruby
 
 require "bundler/setup"
 require "global_food_festivals"
