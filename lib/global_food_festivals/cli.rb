@@ -36,7 +36,7 @@ end
         puts "#{the_festival.location}\n\n"
         puts "#{the_festival.description}\n\n"
         puts "---------------------------------------------------------------------------------------------------------------------------------------"
-        puts "Enter the number of the festival that you would like more information, type 'list' to view all 12 festivals, or type 'exit' to exit the program."
+        puts "Enter the number of the festival that you would like more information on, type 'list' to view all 12 festivals, or type 'exit' to exit the program."
         list_festivals
       elsif input == "list"
         list_festivals
