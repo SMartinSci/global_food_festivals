@@ -23,9 +23,9 @@ class CLI
     puts ""
     puts "Which food festivals would you like to see more information on?".colorize(:color => :black, :background => :light_white)
     puts "Enter the corresponding number, listed above, of each food festival to get a brief description and location.\n".colorize(:color => :black, :background => :light_white)
-end
+  end
 
-   def menu
+  def menu
     input = nil
     while input != "exit".downcase
       input = gets.strip.downcase
@@ -47,7 +47,7 @@ end
     end
   end
 
-    def goodbye
+  def goodbye
     puts "Global food festivals await you!"
   end
 end
