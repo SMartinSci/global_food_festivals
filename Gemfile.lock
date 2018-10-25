@@ -2,22 +2,23 @@ PATH
   remote: .
   specs:
     global_food_festivals (0.1.0)
+      colorize (~> 0.8.1)
       nokogiri
 
 GEM
   remote: https://rubygems.org/
   specs:
     coderay (1.1.2)
+    colorize (0.8.1)
     diff-lcs (1.3)
     method_source (0.9.0)
     mini_portile2 (2.3.0)
-    nokogiri (1.8.4)
+    nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
     rake (10.4.2)
-    require_all (2.0.0)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
       rspec-expectations (~> 3.8.0)
@@ -40,8 +41,7 @@ DEPENDENCIES
   global_food_festivals!
   pry
   rake (~> 10.0)
-  require_all
   rspec
 
 BUNDLED WITH
-   1.16.5
+   1.16.6

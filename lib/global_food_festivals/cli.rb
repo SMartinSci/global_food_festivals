@@ -1,5 +1,4 @@
 #CLI Controller
-require 'colorize'
 class CLI
 
   def call
