@@ -1,5 +1,4 @@
 source "https://rubygems.org"
-gem "require_all"
 
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
