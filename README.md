@@ -20,7 +20,9 @@ Or install it yourself as:
 
 ## Usage
 
-Run bin/global-food-festivals to execute the gem.
+To execute the gem, run:  
+
+    $ bin/global-food-festivals 
 
 [![Demo video](https://img.youtube.com/vi/SFlPI9a40aE/maxresdefault.jpg)](https://www.youtube.com/watch?v=SFlPI9a40aE)
 
@@ -32,7 +34,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/'diligent-markup-7911'/global_food_festivals. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at [Global Food Festivals License](https://github.com/'diligent-markup-7911'/global_food_festivals). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## License
 
