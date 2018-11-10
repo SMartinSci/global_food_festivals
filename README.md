@@ -22,6 +22,8 @@ Or install it yourself as:
 
 Run bin/global-food-festivals to execute the gem.
 
+[![Demo video](http://img.youtube.com/vi/v=SFlPI9a40aE/0.jpg)](https://www.youtube.com/watch?v=SFlPI9a40aE)
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
