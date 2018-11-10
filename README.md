@@ -22,7 +22,7 @@ Or install it yourself as:
 
 Run bin/global-food-festivals to execute the gem.
 
-[![Demo video](http://img.youtube.com/vi/v=SFlPI9a40aE/0.jpg)](https://www.youtube.com/watch?v=SFlPI9a40aE)
+[![Demo video](https://img.youtube.com/vi/SFlPI9a40aE/maxresdefault.jpg)](https://www.youtube.com/watch?v=SFlPI9a40aE)
 
 ## Development
 
